@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Documentation -- Computed Properties and Watchers</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+
+    <div id="app">
+
+        <h2>Listening To Events</h2>
+        <button v-on:click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+
+
+        <h2>Method Event Handler</h2>
+        <button v-on:click="greet">Click</button>
+
+        <h2>Methods in Inline Handlers</h2>
+
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="say('what')">Say what</button>
+
+
+        <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+
+
+        <h2>Event Modifiers</h2>
+
+        
+
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Documentation -- Computed Properties and Watchers</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+
+    <div id="app">
+
+        <div class="box">
+            <h3>Text</h3>
+            <input v-model="message" placeholder="edit me">
+            <p>Message is: {{message}}</p>
+
+            <h3>Multiline text</h3>
+            <h4>Multiline message is:</h4>
+            <p style="white-space: pre-line;">{{message}}</p>
+
+            <textarea v-model="message" placeholder="add multiple lines"></textarea>
+        </div>
+
+
+
+        <div class="box">
+            <h3>Checkbox</h3>
+            <input type="checkbox" id="checkbox" v-model="checked">
+
+            <label for="checkbox">{{checked}}</label>
+        </div>
+
+
+        <div class="box">
+            <h3>Multiple checkboxes, bound to the same Array:</h3>
+
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+
+
+            <br>
+            <h4>Checked names: {{checkedNames}}</h4>
+        </div>
+
+
+
+        <div class="box">
+            <h3>Radio</h3>
+            <input type="radio" id="one" value="One" v-model="picked">
+            <label for="one">One</label>
+
+            <input type="radio" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+
+            <br>
+
+            <h4>Picked: {{picked}}</h4>
+        </div>
+
+        <div class="box">
+            <h3>Select</h3>
+            <select v-model="selected">
+
+                <option disabled value="">Please select one</option>
+
+                <option value="ABC">All</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+
+
+            </select>
+
+            <br>
+            <h4>Selected: {{selected}}</h4>
+        </div>
+
+
+        <div class="box">
+            <h3>Multiple select (bound to Array):</h3>
+
+
+            <select v-model="multipleSelected" multiple>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+
+
+            </select>
+            <br>
+            <h4>Selected: {{ multipleSelected }}</h4>
+        </div>
+
+
+
+        <div class="box">
+            <h3>Dynamic options rendered with v-for:</h3>
+
+            <select v-model="selected">
+                <option disabled value="">Please select one</option>
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{option.text}}
+                </option>
+            </select>
+
+            <h4>Selected: {{selected}}</h4>
+        </div>
+
+
+        <div class="box">
+            <h3>Select Options</h3>
+
+
+            <select v-model="selected">
+                <option disabled value="">Please select one</option>
+                <option v-bind:value="{number: 123}">123</option>
+            </select>
+            <h4>Selected: {{selected.number}}</h4>
+        </div>
+
+
+        <div class="box">
+            <h3>Modifiers</h3>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+</body>
+</html>

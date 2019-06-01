@@ -1,0 +1,25 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+button {
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 5px;
+    background: gold;
+}
+
+.box {
+    background: #eee;
+}
+
+div {
+    margin: 2em;
+}
+span {
+    margin: 2em;
+}
+h3 {
+    margin: 2em;
+}
+select {
+    margin: 2em;
+}

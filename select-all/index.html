@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Documentation -- Computed Properties and Watchers</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+
+    <div id="app">
+        <h4>User</h4>
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Select All<input type="checkbox" @click="selectAll" v-model="allSelected"></th>
+                </tr>
+                <tr v-for="user in users">
+                    <td>{{ user.name }}</td>
+                    <td><input type="checkbox" v-model="userIds" @click="select" :value="user.id"></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <span>All Selected: {{ allSelected }}</span>
+        <span>Selected Ids: {{ userIds }}</span>
+
+
+        <div class="box">
+            <select v-model="selected" v-on:change="selectOption($event)">
+                <option disabled value="">Please select one</option>
+                <option>Any</option>
+                <option v-for="user in users" v-bind:value="user.id">
+                    {{user.name}}
+                </option>
+
+            </select>
+
+
+            
+            <span>Selected: {{ selected }}</span>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+</body>
+</html>

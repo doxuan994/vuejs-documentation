@@ -1,0 +1,17 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+button {
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 5px;
+    background: gold;
+}
+
+div {
+    margin: 1em;
+}
+.box {
+    background: dodgerblue;
+    max-width: 320px;
+    padding: 3em;
+}
