@@ -1,0 +1,12 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+button {
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 5px;
+    background: gold;
+}
+
+div {
+    margin: 1em;
+}
