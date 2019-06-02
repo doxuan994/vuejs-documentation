@@ -12,18 +12,10 @@
 
 
 
-    <div id="blog-posts-events-demo">
+    <div id="app">
 
+        <blog-post></blog-post>
 
-        <div v-bind:style="{fontSize: postFontSize + 'em'}">
-            <blog-post v-on:enlarge-text="postFontSize += 0.1" v-for="post in posts" v-bind:key="post.id" v-bind:post="post">
-            </blog-post>
-        </div>
-
-
-        <h2>Emitting a Value With An Event</h2>
-
-        
 
     </div>
 

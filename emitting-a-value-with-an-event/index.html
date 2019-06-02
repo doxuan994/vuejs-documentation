@@ -13,17 +13,18 @@
 
 
     <div id="blog-posts-events-demo">
+        <h2>Emitting a Value With An Event</h2>
 
 
         <div v-bind:style="{fontSize: postFontSize + 'em'}">
-            <blog-post v-on:enlarge-text="postFontSize += 0.1" v-for="post in posts" v-bind:key="post.id" v-bind:post="post">
-            </blog-post>
+            <blog-post v-on:enlarge-text="postFontSize += $event" v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></blog-post>
         </div>
 
 
-        <h2>Emitting a Value With An Event</h2>
+        <div v-bind:style="{fontSize: postFontSize + 'em'}">
+            <blog-post v-on:enlarge-text="onEnlargeText" v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></blog-post>
+        </div>
 
-        
 
     </div>
 

@@ -12,18 +12,14 @@
 
 
 
-    <div id="blog-posts-events-demo">
+    <div id="dynamic-component-demo">
 
 
-        <div v-bind:style="{fontSize: postFontSize + 'em'}">
-            <blog-post v-on:enlarge-text="postFontSize += 0.1" v-for="post in posts" v-bind:key="post.id" v-bind:post="post">
-            </blog-post>
-        </div>
+        <button v-for="tab in tabs" v-bind:key="tab" v-bind:class="['tab-button', {active: currentTab === tab}]" v-on:click="currentTab = tab">{{tab}}</button>
 
 
-        <h2>Emitting a Value With An Event</h2>
+        <component v-bind:is="currentTabComponent" class="tab"></component>
 
-        
 
     </div>
 
